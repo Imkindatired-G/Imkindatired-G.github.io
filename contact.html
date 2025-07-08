@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nolan White – Contact</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <a href="index.html" class="logo">
+      <img src="logoemblem.png" alt="NW Emblem"> Nolan White
+    </a>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="resume.html">Resume</a>
+      <a href="projects.html">Projects</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <main class="content">
+    <h1>Contact Me</h1>
+    <form name="contact" method="POST" data-netlify="true">
+      <input type="hidden" name="form-name" value="contact">
+      <label>Name:<input type="text" name="name" required></label>
+      <label>Email:<input type="email" name="email" required></label>
+      <label>Message:<textarea name="message" required></textarea></label>
+      <button type="submit" class="btn">Send</button>
+    </form>
+  </main>
+
+  <footer>
+    &copy; 2025 Nolan White
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
