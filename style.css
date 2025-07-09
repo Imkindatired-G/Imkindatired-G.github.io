@@ -388,6 +388,9 @@ nav a {
   .download-container {
     justify-content: center;
     margin-bottom: 1rem;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
   }
 
   /* === EXTRA: Mobile improvements below this line === */
@@ -404,14 +407,14 @@ nav a {
   p {
     color:#ffffff;;
   }
-  li {
-    color:#ffffff;;
-  }
   .resume-section, .resume-section.intro {
     padding: 0.7em 0.4em 0.5em 0.4em;
     margin-bottom: 0.7em;
     border-radius: 5px;
     color: #111;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
   }
   .resume-list, .resume-skill-list {
     gap: 0.5em 0.6em;
