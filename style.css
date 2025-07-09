@@ -407,6 +407,9 @@ nav a {
   p {
     color:#ffffff;;
   }
+  li {
+    color:#ffffff;;
+  }
   .resume-section, .resume-section.intro {
     padding: 0.7em 0.4em 0.5em 0.4em;
     margin-bottom: 0.7em;
