@@ -36,6 +36,10 @@
     min-height: 60vh;
     padding: 2em 0.5em;
   }
+  .hero-text {
+    margin-bottom: 1.3em;
+  }
+
   .photo-placeholder {
     width: 120px;
     height: 120px;
