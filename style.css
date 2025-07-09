@@ -116,3 +116,7 @@ form input, form textarea {
 form button {
   cursor: pointer;
 }
+
+.not-clickable {
+  pointer-events: none;
+}
