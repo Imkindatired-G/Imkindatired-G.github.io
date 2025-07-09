@@ -4,39 +4,37 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Nolan White – Contact</title>
+  <meta name="description" content="Contact Nolan White for IT, cybersecurity, and technology inquiries.">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <header>
-    <a href="index.html" class="logo">
-      <img src="logofull.png" alt="NW Logofull">
+    <a href="index.html" class="logo" aria-label="Home">
+      <img src="logofull.png" alt="NW Logo">
     </a>
-    <nav>
+    <nav aria-label="Main navigation">
       <a href="index.html">Home</a>
       <a href="resume.html">Resume</a>
       <a href="projects.html">Projects</a>
-      <a href="contact.html">Contact</a>
+      <a href="contact.html" aria-current="page">Contact</a>
     </nav>
   </header>
 
-<main class="content">
-  <h1>Contact Me</h1>
-  <form action="https://formspree.io/f/xwpbdwkw" method="POST">
-    <label>
-      Name:
-      <input type="text" name="name" required>
-    </label>
-    <label>
-      Your email:
-      <input type="email" name="email" required>
-    </label>
-    <label>
-      Your message:
-      <textarea name="message" required></textarea>
-    </label>
-    <button type="submit" class="btn">Send</button>
-  </form>
-</main>
+  <main class="content">
+    <h1>Contact Me</h1>
+    <form action="https://formspree.io/f/xwpbdwkw" method="POST" autocomplete="on">
+      <label for="name">Name:</label>
+      <input id="name" type="text" name="name" required autocomplete="name">
+
+      <label for="email">Your email:</label>
+      <input id="email" type="email" name="email" required autocomplete="email">
+
+      <label for="message">Your message:</label>
+      <textarea id="message" name="message" required autocomplete="off"></textarea>
+      
+      <button type="submit" class="btn">Send</button>
+    </form>
+  </main>
 
   <footer>
     &copy; 2025 Nolan White
