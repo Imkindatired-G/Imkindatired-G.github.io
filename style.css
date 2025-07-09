@@ -71,6 +71,7 @@ nav a {
   .hero-photo {
     display: flex;
     justify-content: center;
+  }
 }
 
 /* Placeholder styling for the hero photo */
@@ -186,8 +187,7 @@ form button {
     padding: 0.7em 0;
     font-size: 1rem;
   }
-  }
-  .content {
+  .content.resume-content {
     background: #fff;
     color: #111;
     padding: 1em 0.5em;
