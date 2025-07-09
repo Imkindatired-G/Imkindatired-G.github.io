@@ -25,7 +25,6 @@ header, footer {
   pointer-events: none;
   cursor: default;
   margin-left: 0.5em;
-  pointer-events: none;
 }
 nav a {
   color: #fff;
