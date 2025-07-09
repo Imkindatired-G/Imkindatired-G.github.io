@@ -20,6 +20,7 @@ header, footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  /* Add subtle shadow for depth */
   box-shadow: 0 2px 8px rgba(0,0,0,0.12);
   transition: transform 0.35s cubic-bezier(0.4,0,0.2,1), opacity 0.25s;
   z-index: 100;
@@ -34,7 +35,7 @@ footer {
   width: 250px;
   vertical-align: middle;
 }
-
+/* Moved the logo text styles from inline into CSS */
 .logo span {
   font-size: 2rem;
   color: #fff;
@@ -42,32 +43,33 @@ footer {
   cursor: default;
   margin-left: 0.5em;
 }
-
 nav a {
   color: #fff;
   margin-left: 1em;
   text-decoration: none;
-  font-size: 1.8rem;
+  font-size: 1.8rem; /* Adjust font size */
 }
 
+/* Hide header when scrolling down */
 .header-hidden {
   transform: translateY(-120%);
   opacity: 0;
   pointer-events: none;
 }
 
-
+/* Hero section (homepage) */
 .hero {
-  height: 90vh;
+  height: 90vh; /* Reverted from 100vh */
   display: flex;
-  flex-direction: column;
+  flex-direction: column;   /* default: column layout (text above photo) */
   justify-content: center;
   align-items: center;
   text-align: center;
-  opacity: 0;
+  opacity: 0;  /* Start hidden for fade-in effect */
   transition: opacity 0.8s;
 }
-@media (min-width: 768px) { /*Larger Screen Optimization*/
+@media (min-width: 768px) {
+  /* On larger screens, switch hero to row layout: text left, photo right */
   .hero {
     flex-direction: row;
     justify-content: space-between;
@@ -83,7 +85,7 @@ nav a {
   }
 }
 
-/* Placeholder styling for the hero photo, Don't forget to add this later */
+/* Placeholder styling for the hero photo */
 .photo-placeholder {
   width: 220px;
   height: 220px;
@@ -113,8 +115,8 @@ nav a {
 
 .content {
   padding: 3em;
-  min-height: 80vh;
-  opacity: 0;
+  min-height: 80vh; /* Reverted from 90vh */
+  opacity: 0;  /* Start hidden for fade-in effect */
   transition: opacity 0.8s;
 }
 
@@ -128,6 +130,7 @@ nav a {
   max-width: 900px;
   min-height: 80vh;
   border: 1.5px solid rgba(80, 180, 255, 0.08);
+  /* Subtle fade-in */
   animation: fadeInUp 0.8s;
 }
 
@@ -298,96 +301,7 @@ nav a {
   box-shadow: 0 4px 16px rgba(80,180,255,0.18);
 }
 
-.contact-form-container {
-  background: rgba(20, 20, 20, 0.94);
-  max-width: 420px;
-  margin: 3em auto 2em auto;
-  padding: 2.2em 2em 1.5em 2em;
-  border-radius: 16px;
-  box-shadow: 0 6px 32px 0 rgba(80,180,255,0.18);
-  border: 1.5px solid rgba(80, 180, 255, 0.10);
-  display: flex;
-  flex-direction: column;
-  gap: 1.3em;
-  animation: fadeInUp 0.9s;
-}
-.contact-form-container h1 {
-  text-align: center;
-  font-size: 2.1rem;
-  color: #6ae2ff;
-  letter-spacing: 0.02em;
-  margin-bottom: 0.5em;
-  font-weight: 800;
-}
-.contact-form-container label {
-  color: #b7bbc6;
-  font-size: 1.07em;
-  margin-bottom: 0.3em;
-  letter-spacing: 0.01em;
-  font-weight: 600;
-  margin-top: 0.8em;
-}
-.contact-form-container input,
-.contact-form-container textarea {
-  border-radius: 8px;
-  border: 1.2px solid #444e5a;
-  padding: 0.9em 1em;
-  background: rgba(35,40,55,0.90);
-  color: #fff;
-  font-size: 1.11em;
-  outline: none;
-  transition: border 0.18s, box-shadow 0.18s;
-  margin-bottom: 0.2em;
-}
-.contact-form-container input:focus,
-.contact-form-container textarea:focus {
-  border-color: #6ae2ff;
-  box-shadow: 0 2px 12px rgba(80,180,255,0.07);
-}
-.contact-form-container textarea {
-  min-height: 110px;
-  max-height: 300px;
-  resize: vertical;
-}
-.contact-form-container .btn {
-  width: 100%;
-  margin-top: 1.3em;
-  font-size: 1.17em;
-  font-weight: 700;
-  letter-spacing: 0.03em;
-  padding: 0.95em 0;
-}
-
-    @media (max-width: 600px) {
-      .contact-form-container {
-        padding: 1em 0.6em 0.7em 0.6em;
-        border-radius: 10px;
-        max-width: 98vw;
-        margin: 1.1em 0.2em 1em 0.2em;
-        box-shadow: 0 1px 8px rgba(80,180,255,0.09);
-        border: none;
-        gap: 1em;
-      }
-      .contact-form-container h1 {
-        font-size: 1.2rem;
-      }
-      .contact-form-container label {
-        font-size: 0.99em;
-      }
-      .contact-form-container input,
-      .contact-form-container textarea {
-        font-size: 0.97em;
-        padding: 0.7em 0.8em;
-        border-radius: 7px;
-      }
-      .contact-form-container .btn {
-        font-size: 1em;
-        padding: 0.8em 0;
-        border-radius: 7px;
-      }
-    }
-
-/* Smaller Screen Optimization */
+/* Responsive adjustments for mobile devices */
 @media (max-width: 600px) {
   header, footer {
     flex-direction: column;
@@ -410,9 +324,9 @@ nav a {
     width: 100%;
     display: flex;
     flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    gap: 1em;
+    justify-content: center; /* Center the buttons horizontally */
+    align-items: center;     /* Center the buttons vertically */
+    gap: 1em; /* Adds space between buttons */
   }
   nav a {
     display: block;
@@ -425,7 +339,7 @@ nav a {
   }
   .hero {
     height: auto;
-    min-height: 60vh;
+    min-height: 60vh; /* Reverted from 80vh */
     padding: 2em 0.5em;
   }
   .photo-placeholder {
@@ -482,7 +396,7 @@ nav a {
     justify-content: center;
   }
 
-  /* Resume page specific smaller screen optimizations */
+  /* === EXTRA: Mobile improvements below this line === */
   .content.resume-content {
     color: #111;
     padding: 1em 0.2em;

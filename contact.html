@@ -20,22 +20,20 @@
     </nav>
   </header>
 
-  <main>
-    <section class="contact-form-container">
-      <h1>Contact Me</h1>
-      <form action="https://formspree.io/f/xwpbdwkw" method="POST" autocomplete="on">
-        <label for="name">Name</label>
-        <input id="name" type="text" name="name" required autocomplete="name" placeholder="Your name">
+  <main class="content">
+    <h1>Contact Me</h1>
+    <form action="https://formspree.io/f/xwpbdwkw" method="POST" autocomplete="on">
+      <label for="name">Name:</label>
+      <input id="name" type="text" name="name" required autocomplete="name">
 
-        <label for="email">Email</label>
-        <input id="email" type="email" name="email" required autocomplete="email" placeholder="your@email.com">
+      <label for="email">Your email:</label>
+      <input id="email" type="email" name="email" required autocomplete="email">
 
-        <label for="message">Message</label>
-        <textarea id="message" name="message" required autocomplete="off" placeholder="How can I help you?"></textarea>
-        
-        <button type="submit" class="btn">Send Message</button>
-      </form>
-    </section>
+      <label for="message">Your message:</label>
+      <textarea id="message" name="message" required autocomplete="off"></textarea>
+      
+      <button type="submit" class="btn">Send</button>
+    </form>
   </main>
 
   <footer>
