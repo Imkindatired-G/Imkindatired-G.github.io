@@ -1,3 +1,5 @@
+#short script for addding a project entry to a static HTML site
+#usage: python add_project.py "Project Title" "Short description of the project" "path/to/thumbnail.jpg"
 import argparse
 import os
 import re
