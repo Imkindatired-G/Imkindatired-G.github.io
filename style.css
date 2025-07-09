@@ -389,6 +389,54 @@ nav a {
     justify-content: center;
     margin-bottom: 1rem;
   }
+
+  /* === EXTRA: Mobile improvements below this line === */
+  .content.resume-content {
+    background: #fff;
+    color: #111;
+    padding: 1em 0.2em;
+    min-height: 60vh;
+    border-radius: 6px;
+    margin: 0.7em 0.1em 0.7em 0.1em;
+    box-shadow: 0 1px 8px rgba(80,180,255,0.09);
+    border: none;
+  }
+  .resume-section, .resume-section.intro {
+    padding: 0.7em 0.4em 0.5em 0.4em;
+    margin-bottom: 0.7em;
+    border-radius: 5px;
+  }
+  .resume-list, .resume-skill-list {
+    gap: 0.5em 0.6em;
+    font-size: 1em;
+    flex-direction: column;
+  }
+  .resume-list li, .resume-skill-list li {
+    padding: 0.5em 0.6em;
+    font-size: 0.98em;
+  }
+  .job-title, .job-location, .edu-date {
+    font-size: 0.93em;
+    margin-bottom: 0.1em;
+    word-break: break-word;
+  }
+  .education {
+    font-size: 1em;
+  }
+  .download-container {
+    width: 100%;
+    margin-bottom: 0.7rem;
+  }
+  .btn {
+    width: 100%;
+    padding: 0.7em 0;
+    font-size: 1rem;
+    border-radius: 5px;
+  }
+  header, footer {
+    position: static;
+    width: 100%;
+  }
 }
 
 /* Ensure images and embeds are responsive */
