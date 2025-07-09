@@ -180,6 +180,9 @@
   transform: translateY(-2px) scale(1.04);
   box-shadow: 0 4px 16px rgba(80,180,255,0.18);
 }
+.p {
+  color:#fff
+}
 
 /* Mobile (max-width: 600px) adjustments for resume */
 @media (max-width: 600px) {
