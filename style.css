@@ -359,41 +359,31 @@ nav a {
     border: none;
   }
   .resume-section, .resume-section.intro {
-    background: #fff !important;
-    color: #111 !important;
     padding: 1.1em 0.7em 0.7em 0.7em;
     margin-bottom: 1.1em;
     border-radius: 8px;
     border-left: 3px solid #52b2fd;
   }
-  .resume-section h1,
-  .resume-section h2,
+  .resume-section h1 {
+    font-size: 1.5rem;
+  }
+  .resume-section h2 {
+    font-size: 1.1rem;
+    margin-bottom: 0.5em;
+    padding-bottom: 0.15em;
+  }
   .resume-section h3 {
-    color: #111 !important;
-  }
-  .resume-section.intro {
-    flex-direction: row;
-    align-items: center;
-    gap: 1em;
-    display: flex;
-    padding: 1.1em 0.7em 0.7em 0.7em;
-    margin-bottom: 1.1em;
-    border-radius: 8px;
-    border-left: 3px solid #52b2fd;
-  }
-  .profile-photo {
-    width: 70px;
-    height: 70px;
-    margin-right: 0.7em;
-    margin-bottom: 0; /* Remove any stacking gap */
-  }
-  .resume-section.intro > div {
-    flex: 1;
+    font-size: 1em;
   }
   .resume-contact {
     font-size: 0.98em;
     flex-direction: column;
     gap: 0.2em;
+  }
+  .profile-photo {
+    width: 70px;
+    height: 70px;
+    margin-right: 0.7em;
   }
   .download-container {
     justify-content: center;
