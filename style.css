@@ -15,7 +15,7 @@ header, footer {
 }
 .logo img {
   height: 90px;
-  width: 170px;
+  width: 200px;
   vertical-align: middle;
 }
 /* Moved the logo text styles from inline into CSS */
