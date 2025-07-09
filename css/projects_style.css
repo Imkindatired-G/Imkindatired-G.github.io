@@ -1,1 +1,34 @@
-/* Projects page specific styles (none yet) */
+/* Projects page specific styles */
+.project-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5em;
+}
+
+.project-item {
+  background: rgba(0,0,0,0.2);
+  padding: 1em;
+  border-radius: 8px;
+  width: 300px;
+}
+
+.project-item img {
+  width: 100%;
+  border-radius: 4px;
+}
+
+.project-item h2 {
+  margin-top: 0.5em;
+  font-size: 1.4rem;
+}
+
+.project-item p {
+  font-size: 1rem;
+}
+
+.project-item a {
+  color: inherit;
+  text-decoration: none;
+}
