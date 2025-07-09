@@ -20,12 +20,19 @@
 .project-item {
   background: rgb(255, 255, 255);
   color: black;
-  box-shadow: 0 4px 32px 0 rgba(0,0,0,0.15);
-  transition: background 0.2s, color 0.2s, transform 0.15s;
-  animation: fadeInUp 0.9s;
   padding: 1em;
   border-radius: 25px;
   width: 300px;
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeInUp 0.8s ease forwards;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .project-item img {
