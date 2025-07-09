@@ -215,8 +215,7 @@ form button {
     width: 100%;
     min-width: 0;
     max-width: 100%;
-    /* Increase height for mobile to better fit the space */
-    height: 85vh;
+    height: 60vh;
   }
   form {
     padding: 0 0.2em;
