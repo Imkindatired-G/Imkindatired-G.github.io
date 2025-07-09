@@ -405,23 +405,28 @@ nav a {
     padding: 0.7em 0.4em 0.5em 0.4em;
     margin-bottom: 0.7em;
     border-radius: 5px;
+    color: #111;
   }
   .resume-list, .resume-skill-list {
     gap: 0.5em 0.6em;
     font-size: 1em;
     flex-direction: column;
+    color: #111;
   }
   .resume-list li, .resume-skill-list li {
     padding: 0.5em 0.6em;
     font-size: 0.98em;
+    color: #111;
   }
   .job-title, .job-location, .edu-date {
     font-size: 0.93em;
     margin-bottom: 0.1em;
     word-break: break-word;
+    color: #111;
   }
   .education {
     font-size: 1em;
+    color: #111;
   }
   .download-container {
     width: 100%;
