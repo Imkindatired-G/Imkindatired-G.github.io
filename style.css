@@ -46,7 +46,7 @@ nav a {
 
 /* Hero section (homepage) */
 .hero {
-  height: 100vh; /* Increased from 90vh */
+  height: 90vh; /* Reverted from 100vh */
   background: url('background.png') no-repeat center fixed;
   background-size: cover;
   display: flex;
@@ -104,7 +104,7 @@ nav a {
 
 .content {
   padding: 3em;
-  min-height: 90vh; /* Increased from 80vh */
+  min-height: 80vh; /* Reverted from 90vh */
   opacity: 0;  /* Start hidden for fade-in effect */
   transition: opacity 0.8s;
 }
@@ -122,6 +122,7 @@ nav a {
   border-radius: 6px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.07);
   width: 80%;
+  height: 800px;
 }
 
 form {
@@ -161,11 +162,12 @@ form button {
   nav a {
     display: block;
     margin: 0.5em 0 0 0;
-    font-size: 1.2rem;
+    font-size: 1.3rem;
+    float: right;
   }
   .hero {
     height: auto;
-    min-height: 80vh; /* Increased from 60vh */
+    min-height: 60vh; /* Reverted from 80vh */
     padding: 2em 0.5em;
   }
   .photo-placeholder {
@@ -180,7 +182,7 @@ form button {
   }
   .content {
     padding: 1em 0.5em;
-    min-height: 80vh; /* Increased from 60vh */
+    min-height: 60vh; /* Reverted from 80vh */
   }
   .download-container {
     flex-direction: column;
