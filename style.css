@@ -172,7 +172,6 @@ form button {
     font-size: 1.3rem;
     margin: 0;
   }
-  }
   .hero {
     height: auto;
     min-height: 60vh; /* Reverted from 80vh */
