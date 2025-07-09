@@ -15,7 +15,7 @@ header, footer {
 }
 .logo img {
   height: 80px;
-  width: 80px;
+  width: 160px;
   vertical-align: middle;
 }
 /* Moved the logo text styles from inline into CSS */
@@ -115,8 +115,4 @@ form input, form textarea {
 }
 form button {
   cursor: pointer;
-}
-
-.not-clickable {
-  pointer-events: none;
 }
