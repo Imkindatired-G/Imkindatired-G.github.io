@@ -22,5 +22,30 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
+  // Header hide-on-scroll
+  let lastScrollY = window.scrollY;
+  const header = document.querySelector('header');
+  let ticking = false;
+
+  function handleHeaderScroll() {
+    const currentScrollY = window.scrollY;
+    if (currentScrollY > lastScrollY && currentScrollY > 50) {
+      // Scrolling down
+      header.classList.add('header-hidden');
+    } else {
+      // Scrolling up
+      header.classList.remove('header-hidden');
+    }
+    lastScrollY = currentScrollY;
+    ticking = false;
+  }
+
+  window.addEventListener('scroll', () => {
+    if (!ticking) {
+      window.requestAnimationFrame(handleHeaderScroll);
+      ticking = true;
+    }
+  });
+
   console.log('Portfolio loaded.');
 });

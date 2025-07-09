@@ -22,6 +22,10 @@ header, footer {
   align-items: center;
   /* Add subtle shadow for depth */
   box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+  transition: transform 0.35s cubic-bezier(0.4,0,0.2,1), opacity 0.25s;
+  z-index: 100;
+  position: sticky;
+  top: 0;
 }
 footer {
   margin-top: auto;
@@ -44,6 +48,13 @@ nav a {
   margin-left: 1em;
   text-decoration: none;
   font-size: 1.8rem; /* Adjust font size */
+}
+
+/* Hide header when scrolling down */
+.header-hidden {
+  transform: translateY(-120%);
+  opacity: 0;
+  pointer-events: none;
 }
 
 /* Hero section (homepage) */
