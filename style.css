@@ -349,7 +349,6 @@ nav a {
     font-size: 1rem;
   }
   .content.resume-content {
-    background: #fff;
     color: #111;
     padding: 1em 0.5em;
     min-height: 60vh;
@@ -404,9 +403,6 @@ nav a {
     border: none;
   }
   p {
-    color:#ffffff;;
-  }
-  li {
     color:#ffffff;;
   }
   .resume-section, .resume-section.intro {
