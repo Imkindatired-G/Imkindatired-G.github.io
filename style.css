@@ -187,7 +187,7 @@ form button {
     padding: 0.7em 0;
     font-size: 1rem;
   }
-  .content {
+  .content.resume-content {
     background: #fff;
     color: #111;
     padding: 1em 0.5em;
