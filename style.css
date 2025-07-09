@@ -196,6 +196,9 @@ form button {
   .download-container {
     flex-direction: column;
     align-items: center;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1rem;
   }
   .content embed {
     width: 100%;
