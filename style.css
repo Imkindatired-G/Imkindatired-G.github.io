@@ -409,6 +409,10 @@ nav a {
     margin-bottom: 0.7em;
     border-radius: 5px;
     color: #111;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+  }
   }
   .resume-list, .resume-skill-list {
     gap: 0.5em 0.6em;
