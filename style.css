@@ -3,7 +3,9 @@
 }
 body {
   font-family: 'Arial', sans-serif;
-  background: #121212;
+  background: #121212 url('background.png') no-repeat center center fixed;
+  background-size: cover;
+  background-attachment: fixed;
   color: #fff;
   min-height: 100vh;
   display: flex;
@@ -47,8 +49,6 @@ nav a {
 /* Hero section (homepage) */
 .hero {
   height: 90vh; /* Reverted from 100vh */
-  background: url('background.png') no-repeat center fixed;
-  background-size: cover;
   display: flex;
   flex-direction: column;   /* default: column layout (text above photo) */
   justify-content: center;
