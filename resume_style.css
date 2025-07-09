@@ -1,0 +1,280 @@
+/* Resume page specific styles */
+.content.resume-content {
+  background: rgba(20, 20, 20, 0.92);
+  color: #f5f5f5;
+  border-radius: 18px;
+  box-shadow: 0 4px 32px 0 rgba(0,0,0,0.18);
+  padding: 2.5em 2.5em 2em 2.5em;
+  margin: 2.5em auto 2em auto;
+  max-width: 900px;
+  min-height: 80vh;
+  border: 1.5px solid rgba(80, 180, 255, 0.08);
+  /* Subtle fade-in */
+  animation: fadeInUp 0.8s;
+}
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(30px);}
+  to { opacity: 1; transform: translateY(0);}
+}
+
+.resume-section {
+  background: rgba(30, 30, 30, 0.98);
+  border-radius: 14px;
+  margin-bottom: 2.2em;
+  padding: 2.2em 2em 1.5em 2em;
+  box-shadow: 0 2px 24px 0 rgba(20, 20, 20, 0.13);
+  border-left: 4px solid #52b2fd;
+  border-top: 1px solid rgba(80,180,255,0.07);
+  border-bottom: 1px solid rgba(80,180,255,0.07);
+  transition: box-shadow 0.3s, border-color 0.3s;
+}
+
+.resume-section.intro {
+  display: flex;
+  align-items: center;
+  gap: 2em;
+  background: rgba(40, 40, 40, 0.98);
+  border-left: 6px solid #52b2fd;
+  margin-bottom: 2.5em;
+  padding: 2.2em 2em 1.5em 2em;
+}
+
+.profile-photo {
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #52b2fd;
+  box-shadow: 0 2px 12px rgba(80,180,255,0.12);
+  margin-right: 1.5em;
+  background: #222;
+}
+
+.resume-section h1 {
+  font-size: 2.5rem;
+  color: #fff;
+  margin-bottom: 0.2em;
+  font-weight: 800;
+  letter-spacing: 0.01em;
+}
+
+.resume-section h2 {
+  color: #52b2fd;
+  font-size: 2.1rem;
+  margin-bottom: 0.7em;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  border-bottom: 1.5px solid #2a2a2a;
+  padding-bottom: 0.3em;
+}
+
+.resume-section h3 {
+  color: #fff;
+  font-size: 1.25em;
+  margin: 0 0 0.2em 0;
+  font-weight: 600;
+}
+
+.resume-list, .resume-skill-list {
+  list-style: none;
+  padding-left: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1em 2.5em;
+}
+
+.resume-list li, .resume-skill-list li {
+  margin-bottom: 0.8em;
+  background: rgba(80, 80, 80, 0.18);
+  border-radius: 7px;
+  padding: 0.7em 1.2em;
+  color: #eaf6ff;
+  font-size: 1.1em;
+  box-shadow: 0 1px 4px rgba(40,40,40,0.07);
+  border-left: 3px solid #52b2fd;
+  transition: background 0.2s, border-color 0.2s;
+}
+.resume-list li:hover, .resume-skill-list li:hover {
+  background: rgba(80, 180, 255, 0.13);
+  border-left: 3px solid #8fcbf7;
+}
+
+.resume-skill-list {
+  gap: 0.6em 2em;
+  font-size: 1em;
+}
+
+.resume-contact {
+  color: #b7bbc6;
+  font-size: 1.13em;
+  margin-bottom: 0.7em;
+  margin-top: 0.7em;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.7em;
+  align-items: center;
+}
+.resume-contact a {
+  color: #6ae2ff;
+  text-decoration: underline;
+  transition: color 0.18s;
+  font-weight: 500;
+}
+.resume-contact a:hover {
+  color: #8fcbf7;
+}
+
+.job-title, .job-location, .edu-date {
+  display: block;
+  color: #b7bbc6;
+  font-size: 0.98em;
+  margin-bottom: 0.2em;
+}
+
+.job ul {
+  margin-left: 1.2em;
+  margin-top: 0.5em;
+  margin-bottom: 0.7em;
+  padding-left: 1.2em;
+  list-style: disc;
+  color: #eaf6ff;
+}
+
+.job ul li {
+  margin-bottom: 0.4em;
+  font-size: 1.08em;
+  background: none;
+  border: none;
+  box-shadow: none;
+  padding: 0;
+}
+
+.education {
+  margin-bottom: 0.7em;
+  font-size: 1.13em;
+  color: #eaf6ff;
+}
+
+.download-container {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 1.5rem;
+}
+
+.btn {
+  margin-top: 0;
+  padding: 0.8em 1.7em;
+  background: linear-gradient(90deg, #52b2fd 0%, #6ae2ff 100%);
+  color: #111;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 1.1em;
+  border: none;
+  box-shadow: 0 2px 8px rgba(80,180,255,0.13);
+  transition: background 0.2s, color 0.2s, transform 0.2s;
+}
+.btn:hover, .btn:focus {
+  background: linear-gradient(90deg, #6ae2ff 0%, #52b2fd 100%);
+  color: #000;
+  transform: translateY(-2px) scale(1.04);
+  box-shadow: 0 4px 16px rgba(80,180,255,0.18);
+}
+
+/* Mobile (max-width: 600px) adjustments for resume */
+@media (max-width: 600px) {
+  .content.resume-content {
+    color: #111;
+    padding: 1em 0.5em;
+    min-height: 60vh;
+    border-radius: 10px;
+    margin: 1em 0.2em 1em 0.2em;
+    box-shadow: 0 2px 12px rgba(80,180,255,0.09);
+    border: none;
+  }
+  .resume-section, .resume-section.intro {
+    padding: 1.1em 0.7em 0.7em 0.7em;
+    margin-bottom: 1.1em;
+    border-radius: 8px;
+    border-left: 3px solid #52b2fd;
+  }
+  .resume-section h1 {
+    font-size: 1.5rem;
+  }
+  .resume-section h2 {
+    font-size: 1.1rem;
+    margin-bottom: 0.5em;
+    padding-bottom: 0.15em;
+  }
+  .resume-section h3 {
+    font-size: 1em;
+  }
+  .resume-contact {
+    font-size: 0.98em;
+    flex-direction: column;
+    gap: 0.2em;
+  }
+  .profile-photo {
+    width: 70px;
+    height: 70px;
+    margin-right: 0.7em;
+  }
+  .download-container {
+    justify-content: center;
+    margin-bottom: 1rem;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* Extra mobile improvements */
+  .content.resume-content {
+    color: #111;
+    padding: 1em 0.2em;
+    min-height: 60vh;
+    border-radius: 6px;
+    margin: 0.7em 0.1em 0.7em 0.1em;
+    box-shadow: 0 1px 8px rgba(80,180,255,0.09);
+    border: none;
+  }
+  .resume-section, .resume-section.intro {
+    padding: 0.7em 0.4em 0.5em 0.4em;
+    margin-bottom: 0.7em;
+    border-radius: 5px;
+    color: #111;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+  }
+  .resume-list, .resume-skill-list {
+    gap: 0.5em 0.6em;
+    font-size: 1em;
+    flex-direction: column;
+    color: #111;
+  }
+  .resume-list li, .resume-skill-list li {
+    padding: 0.5em 0.6em;
+    font-size: 0.98em;
+    color: #111;
+  }
+  .job-title, .job-location, .edu-date {
+    font-size: 0.93em;
+    margin-bottom: 0.1em;
+    word-break: break-word;
+    color: #111;
+  }
+  .education {
+    font-size: 1em;
+    color: #111;
+  }
+  .download-container {
+    width: 100%;
+    margin-bottom: 0.7rem;
+  }
+  .btn {
+    width: 100%;
+    padding: 0.7em 0;
+    font-size: 1rem;
+    border-radius: 5px;
+  }
+}
