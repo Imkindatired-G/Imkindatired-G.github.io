@@ -14,8 +14,8 @@ header, footer {
   align-items: center;
 }
 .logo img {
-  height: 80px;
-  width: 160px;
+  height: 90px;
+  width: 170px;
   vertical-align: middle;
 }
 /* Moved the logo text styles from inline into CSS */
