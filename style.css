@@ -19,12 +19,13 @@ header, footer {
   vertical-align: middle;
 }
 /* Moved the logo text styles from inline into CSS */
-.logo a {
+.logo span {
   font-size: 2rem;
   color: #fff;
   pointer-events: none;
   cursor: default;
   margin-left: 0.5em;
+  pointer-events: none;
 }
 nav a {
   color: #fff;
