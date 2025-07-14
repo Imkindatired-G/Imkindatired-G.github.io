@@ -118,8 +118,7 @@ nav a {
 .content {
   padding: 3em;
   min-height: 80vh; /* Reverted from 90vh */
-  opacity: 0;  /* Start hidden for fade-in effect */
-  transition: opacity 0.8s;
+  /* Fade-in handled by JS, so no need for opacity/transition here */
 }
 
 /* Ensure images and embeds are responsive */
@@ -127,6 +126,7 @@ img, embed {
   max-width: 100%;
   height: auto;
 }
+
 
 /* Fade-in animation for main content and hero section */
 .content, .hero {

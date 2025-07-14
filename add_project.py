@@ -1,41 +1,39 @@
-#short script for addding a project entry to a static HTML site
-#usage: python add_project.py "Project Title" "Short description of the project" "path/to/thumbnail.jpg"
+# Short script for adding a project entry to a static HTML site
+# Usage: python add_project.py "Project Title" "Short description" "path/to/thumbnail.jpg"
 import argparse
 import os
 import re
 
 TEMPLATE = """<!DOCTYPE html>
-<html lang=\"en\">
+<html lang="en">
 <head>
-  <meta charset=\"UTF-8\">
-  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>{title}</title>
-  <link rel=\"stylesheet\" href=\"./css/style.css\">
-  <link rel=\"stylesheet\" href=\"./css/mobile_style.css\">
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./css/mobile_style.css">
 </head>
 <body>
   <header>
-    <a href=\"index.html\" class=\"logo\" aria-label=\"Home\">
-      <img src=\"./images/logofull.png\" alt=\"NW Logo\">
+    <a href="index.html" class="logo" aria-label="Home">
+      <img src="./images/logofull.png" alt="NW Logo">
     </a>
-    <nav aria-label=\"Main navigation\">
-      <a href=\"index.html\">Home</a>
-      <a href=\"resume.html\">Resume</a>
-      <a href=\"projects.html\">Projects</a>
-      <a href=\"contact.html\">Contact</a>
+    <nav aria-label="Main navigation">
+      <a href="index.html">Home</a>
+      <a href="resume.html">Resume</a>
+      <a href="projects.html">Projects</a>
+      <a href="contact.html">Contact</a>
     </nav>
   </header>
-
-  <main class=\"content\">
+  <main class="content">
     <h1>{title}</h1>
-    <img src=\"{thumbnail}\" alt=\"{title} thumbnail\" class=\"project-thumb\">
+    <img src="{thumbnail}" alt="{title} thumbnail" class="project-thumb">
     <p>{description}</p>
   </main>
-
   <footer>
     &copy; 2025 Nolan White - Don't Look at my code, it's a mess!
   </footer>
-  <script src=\"script.js\"></script>
+  <script src="script.js"></script>
 </body>
 </html>
 """
@@ -45,18 +43,21 @@ PROJECT_LIST_END = "<!-- PROJECTS-END -->"
 
 
 def slugify(text):
+    """Convert text to a URL-friendly slug."""
     text = text.lower()
     text = re.sub(r"[^a-z0-9]+", "-", text)
     return text.strip('-')
 
 
 def create_project_page(slug, title, description, thumbnail):
+    """Create a new HTML page for the project."""
     html = TEMPLATE.format(title=title, description=description, thumbnail=thumbnail)
     with open(f"{slug}.html", "w", encoding="utf-8") as f:
         f.write(html)
 
 
 def add_listing_to_projects(slug, title, description, thumbnail, projects_file="projects.html"):
+    """Add a project listing to the main projects.html file."""
     if not os.path.exists(projects_file):
         raise FileNotFoundError(projects_file)
 
@@ -69,13 +70,13 @@ def add_listing_to_projects(slug, title, description, thumbnail, projects_file="
         content = content.replace("<h1>Projects</h1>", "<h1>Projects</h1>" + insertion)
 
     listing = (
-        f"  <li class=\"project-item\">\n"
-        f"    <a href=\"{slug}.html\">\n"
-        f"      <img src=\"{thumbnail}\" alt=\"{title} thumbnail\">\n"
-        f"      <h2>{title}</h2>\n"
-        f"      <p>{description}</p>\n"
-        f"    </a>\n"
-        f"  </li>\n")
+        f'  <li class="project-item">\n'
+        f'    <a href="{slug}.html">\n'
+        f'      <img src="{thumbnail}" alt="{title} thumbnail">\n'
+        f'      <h2>{title}</h2>\n'
+        f'      <p>{description}</p>\n'
+        f'    </a>\n'
+        f'  </li>\n')
 
     # insert before end marker
     new_content = content.replace(PROJECT_LIST_END, listing + PROJECT_LIST_END)
@@ -85,6 +86,7 @@ def add_listing_to_projects(slug, title, description, thumbnail, projects_file="
 
 
 def main():
+    """Main entry point for the script."""
     parser = argparse.ArgumentParser(description="Add a project entry and page")
     parser.add_argument("title", help="Project title")
     parser.add_argument("description", help="Short description")

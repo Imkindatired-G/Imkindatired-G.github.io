@@ -1,6 +1,6 @@
 // Smooth scrolling for navigation links
 document.addEventListener('DOMContentLoaded', () => {
-  // Fade-in animation for main content
+  // Fade-in animation for main content or hero section
   const main = document.querySelector('.content, .hero');
   if (main) {
     main.style.opacity = 0;
@@ -30,10 +30,8 @@ document.addEventListener('DOMContentLoaded', () => {
   function handleHeaderScroll() {
     const currentScrollY = window.scrollY;
     if (currentScrollY > lastScrollY && currentScrollY > 50) {
-      // Scrolling down
       header.classList.add('header-hidden');
     } else {
-      // Scrolling up
       header.classList.remove('header-hidden');
     }
     lastScrollY = currentScrollY;
@@ -46,6 +44,4 @@ document.addEventListener('DOMContentLoaded', () => {
       ticking = true;
     }
   });
-
-  console.log('Portfolio loaded.');
 });
