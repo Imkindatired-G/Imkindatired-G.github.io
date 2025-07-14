@@ -26,10 +26,31 @@
     display: block;
     font-size: 1.3rem;
     margin: 0;
+    padding: 0.5em 0.9em;
+    border-radius: 6px;
+    transition: background 0.18s, color 0.18s, box-shadow 0.18s, transform 0.13s;
+  }
+  nav a:hover,
+  nav a:focus {
+    background: linear-gradient(90deg, #52b2fd 0%, #6ae2ff 100%);
+    color: #131313;
+    box-shadow: 0 2px 8px rgba(80,180,255,0.13);
+    transform: translateY(-1.5px) scale(1.03);
+    outline: none;
   }
   nav a[aria-current="page"] {
-    border-bottom: 2px solid #52b2fd;
-    color: #6ae2ff;
+    background: linear-gradient(90deg, #6ae2ff 0%, #52b2fd 100%);
+    color: #131313;
+    font-weight: 700;
+    box-shadow: 0 2px 8px rgba(80,180,255,0.13);
+    border-bottom: none;
+    pointer-events: none;
+    cursor: default;
+  }
+  nav a:active {
+    background: #222;
+    color: #fff;
+    transform: scale(0.97);
   }
   .hero {
     height: auto;
@@ -47,7 +68,7 @@
   }
   .btn {
     width: 100%;
-    padding: 0.7em 0;
+    padding: 0.4em 0;
     font-size: 1rem;
   }
 }
