@@ -6,6 +6,7 @@
   <title>SamExtractor</title>
   <link rel="stylesheet" href="./css/style.css">
   <link rel="stylesheet" href="./css/mobile_style.css">
+  <link rel="stylesheet" href="./css/samextractor_style.css">
 </head>
 <body>
   <header>
@@ -19,10 +20,57 @@
       <a href="contact.html">Contact</a>
     </nav>
   </header>
-
   <main class="content">
     <h1>SamExtractor</h1>
     <p>Automated Collection, Decryption, and Display of Windows 10/11 Password Hashes</p>
+
+    <!-- Option 1: Gallery section below the intro -->
+    <section class="dev-photos">
+      <div class="photo-gallery">
+      <div class="photo-item">
+        <img src="./images/SamExtractor/dev1.png" alt="Development photo 1">
+        <div class="dialogue-box">
+        I wanted to automate the process of collecting and decrypting Windows password hashes, so I wrote a python script to collect the SAM, SYSTEM, and SECURITY hives from a live Windows system using RawCopy.
+        </div>
+      </div>
+      <div class="photo-item">
+        <img src="./images/SamExtractor/dev2.png" alt="Development photo 2">
+        <div class="dialogue-box">
+        I noticed when the registry hives were copied from System32, windows would often try to remove the copies. The above lines are my attempt at a workaround. They simply rename the files immediatley after copying, copy once more, and delete the originals. This seems to inhibit the removal process.
+        </div>
+      </div>
+      <div class="photo-item">
+        <img src="./images/SamExtractor/dev3.png" alt="Development photo 3">
+        <div class="dialogue-box">
+        After collecting the hives they are passed to samviewer.py, a project by Endermanch that extracts and decrypts the password hashes.
+        <div class="video-section" style="margin-top:1em;">
+          <strong>Check out this video by Endermanch for a deeper dive into the complicated math behind decrypting the password hashes:</strong>
+          <br>
+          <a href="https://www.youtube.com/watch?v=Hq_RgcYL9_k&t=517s" target="_blank" rel="noopener">
+            Cracking Windows 11 Passwords
+          </a>
+        </div>
+        </div>
+      </div>
+      </div>
+      </div>
+    </section>
+
+    <!-- Credits and Disclaimers Section -->
+    <section class="credits-disclaimer subtle-box">
+      <h2>Credits &amp; Disclaimers</h2>
+      <ul>
+        <li>RawCopy utility by <a href="https://github.com/jschicht/RawCopy" target="_blank" rel="noopener">jschicht</a></li>
+        <li>samviewer.py by <a href="https://github.com/Endermanch/scripts" target="_blank" rel="noopener">Endermanch</a></li>
+      </ul>
+      <p><strong>Disclaimer:</strong> This project is intended for educational and authorized security research purposes only. Unauthorized use on systems you do not own or have explicit permission to test is strictly prohibited and may be illegal.</p>
+    </section>
+
+    <div class="github-btn-container">
+      <a href="https://github.com/WhiteNolan/SamExtractor" target="_blank" rel="noopener" class="btn">
+        View on GitHub
+      </a>
+    </div>
   </main>
 
   <footer>
