@@ -80,6 +80,11 @@
   nav::after {
     content: '\203A'; /* right arrow */
     right: -0.7em; /* align with screen edge */
+    left: 0.3em;
+  }
+  nav::after {
+    content: '\203A'; /* right arrow */
+    right: 0.3em;
   }
   .hero {
     height: auto;
