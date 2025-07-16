@@ -82,14 +82,14 @@
   nav::before {
     content: '\2039'; /* left arrow */
     left: 0;
-    position: fixed;
+    position: absolute;
     z-index: 10;
     background: none;
   }
   nav::after {
     content: '\203A'; /* right arrow */
     right: 0;
-    position: fixed;
+    position: absolute;
     z-index: 10;
     background: none;
   }
