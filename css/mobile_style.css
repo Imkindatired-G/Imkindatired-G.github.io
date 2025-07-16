@@ -65,8 +65,7 @@
 
   nav::before,
   nav::after {
-    position: absolute;
-    top: 50%;
+    top: 62%;
     transform: translateY(-50%);
     color: #ccc;
     font-size: 1.4rem;
@@ -75,16 +74,13 @@
   }
   nav::before {
     content: '\2039'; /* left arrow */
-    left: -0.7em; /* align with screen edge */
-  }
-  nav::after {
-    content: '\203A'; /* right arrow */
-    right: -0.7em; /* align with screen edge */
-    left: 0.3em;
+    left: 0.3em; /* align with screen edge */
+    position: absolute;
   }
   nav::after {
     content: '\203A'; /* right arrow */
     right: 0.3em;
+    position: absolute;
   }
   .hero {
     height: auto;
