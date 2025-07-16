@@ -27,6 +27,13 @@
     scrollbar-width: none; /* Firefox */
     position: relative;
     padding: 0 1.4em; /* space so links don't touch the arrows */
+    /* Fade out nav links near the arrows using a gradient mask */
+    mask-image: linear-gradient(to right, transparent 0%, #000 12%, #000 88%, transparent 100%);
+    -webkit-mask-image: linear-gradient(to right, transparent 0%, #000 12%, #000 88%, transparent 100%);
+    mask-size: 100% 100%;
+    mask-repeat: no-repeat;
+    -webkit-mask-size: 100% 100%;
+    -webkit-mask-repeat: no-repeat;
   }
   nav::-webkit-scrollbar {
     display: none; /* Chrome/Safari */
