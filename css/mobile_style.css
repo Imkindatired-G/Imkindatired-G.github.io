@@ -25,6 +25,8 @@
     white-space: nowrap;
     -webkit-overflow-scrolling: touch;
     scrollbar-width: none; /* Firefox */
+    position: relative;
+    padding: 0 1.4em; /* space so links don't touch the arrows */
   }
   nav::-webkit-scrollbar {
     display: none; /* Chrome/Safari */
@@ -59,6 +61,25 @@
     background: #222;
     color: #fff;
     transform: scale(0.97);
+  }
+
+  nav::before,
+  nav::after {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #ccc;
+    font-size: 1.4rem;
+    pointer-events: none;
+    user-select: none;
+  }
+  nav::before {
+    content: '\2039'; /* left arrow */
+    left: -0.7em; /* align with screen edge */
+  }
+  nav::after {
+    content: '\203A'; /* right arrow */
+    right: -0.7em; /* align with screen edge */
   }
   .hero {
     height: auto;
