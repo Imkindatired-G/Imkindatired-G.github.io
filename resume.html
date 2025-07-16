@@ -15,10 +15,12 @@
       <img src="./images/logofull.png" alt="NW Logo">
     </a>
     <nav aria-label="Main navigation">
+      <span class="nav-arrow left" aria-hidden="true">&#8592;</span>
       <a href="index.html">Home</a>
       <a href="resume.html" aria-current="page">Resume</a>
       <a href="projects.html">Projects</a>
       <a href="contact.html">Contact</a>
+      <span class="nav-arrow right" aria-hidden="true">&#8594;</span>
     </nav>
   </header>
 
@@ -111,5 +113,26 @@
     &copy; 2025 Nolan White - Don't Look at my code, it's a mess!
   </footer>
   <script src="script.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const nav = document.querySelector('nav');
+      const leftArrow = nav.querySelector('.nav-arrow.left');
+      const rightArrow = nav.querySelector('.nav-arrow.right');
+      function updateArrows() {
+        if (window.innerWidth > 600) {
+          leftArrow.style.display = rightArrow.style.display = 'none';
+          return;
+        }
+        leftArrow.style.display = rightArrow.style.display = '';
+        const scrollLeft = nav.scrollLeft;
+        const maxScroll = nav.scrollWidth - nav.clientWidth;
+        leftArrow.classList.toggle('faded', scrollLeft < 8);
+        rightArrow.classList.toggle('faded', scrollLeft > maxScroll - 8);
+      }
+      nav.addEventListener('scroll', updateArrows);
+      window.addEventListener('resize', updateArrows);
+      updateArrows();
+    });
+  </script>
 </body>
 </html>
