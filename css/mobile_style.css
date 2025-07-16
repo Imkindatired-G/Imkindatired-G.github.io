@@ -13,6 +13,7 @@
     font-size: 1.2rem;
     margin-left: 0.3em;
   }
+  /* Add space for arrows so buttons don't clip under them */
   nav {
     width: 100%;
     margin-top: 0.5em;
@@ -25,9 +26,40 @@
     white-space: nowrap;
     -webkit-overflow-scrolling: touch;
     scrollbar-width: none; /* Firefox */
+    position: relative;
+    padding-left: 2.5em;
+    padding-right: 2.5em;
+    box-sizing: border-box;
   }
   nav::-webkit-scrollbar {
     display: none; /* Chrome/Safari */
+  }
+  /* Fixed arrows on left/right of viewport */
+  .nav-arrow {
+    position: fixed;
+    top: 0;
+    bottom: auto;
+    height: 2.2em;
+    width: 2.2em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    pointer-events: none;
+    font-size: 2em;
+    font-weight: bold;
+    color: #6ae2ff;
+    user-select: none;
+    opacity: 0.7;
+    z-index: 1001;
+    background: none;
+    /* Adjust top to match header height */
+    top: 0.7em;
+  }
+  .nav-arrow.left {
+    left: 0;
+  }
+  .nav-arrow.right {
+    right: 0;
   }
   nav a {
     display: inline-block;
