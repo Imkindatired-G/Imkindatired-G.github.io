@@ -26,6 +26,7 @@
     -webkit-overflow-scrolling: touch;
     scrollbar-width: none; /* Firefox */
     position: relative;
+    padding: 0 1.4em; /* space so links don't touch the arrows */
   }
   nav::-webkit-scrollbar {
     display: none; /* Chrome/Safari */
@@ -74,11 +75,11 @@
   }
   nav::before {
     content: '\2039'; /* left arrow */
-    left: 0.3em;
+    left: -0.7em; /* align with screen edge */
   }
   nav::after {
     content: '\203A'; /* right arrow */
-    right: 0.3em;
+    right: -0.7em; /* align with screen edge */
   }
   .hero {
     height: auto;
