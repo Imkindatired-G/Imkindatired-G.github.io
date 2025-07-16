@@ -26,7 +26,7 @@
     -webkit-overflow-scrolling: touch;
     scrollbar-width: none; /* Firefox */
     position: relative;
-    padding: 0 1.4em; /* space so links don't touch the arrows */
+    padding: 0 2.2em; /* more space so links don't touch the arrows, and arrows can sit outside scroll area */
     /* Fade out nav links near the arrows using a gradient mask */
     mask-image: linear-gradient(to right, transparent 0%, #000 12%, #000 88%, transparent 100%);
     -webkit-mask-image: linear-gradient(to right, transparent 0%, #000 12%, #000 88%, transparent 100%);
@@ -81,13 +81,17 @@
   }
   nav::before {
     content: '\2039'; /* left arrow */
-    left: 0.3em; /* align with screen edge */
-    position: absolute;
+    left: 0;
+    position: fixed;
+    z-index: 10;
+    background: none;
   }
   nav::after {
     content: '\203A'; /* right arrow */
-    right: 0.3em;
-    position: absolute;
+    right: 0;
+    position: fixed;
+    z-index: 10;
+    background: none;
   }
   .hero {
     height: auto;
