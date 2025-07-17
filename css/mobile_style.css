@@ -42,7 +42,7 @@
     display: inline-block;
     font-size: 1.3rem;
     margin: 0;
-    padding: 0.5em 0.9em;
+    padding: 0.5em 0.3em;
     border-radius: 6px;
     transition: background 0.18s, color 0.18s, box-shadow 0.18s, transform 0.13s;
     white-space: nowrap;
