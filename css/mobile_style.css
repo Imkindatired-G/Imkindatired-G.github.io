@@ -28,8 +28,8 @@
     position: relative;
     padding: 0 2.2em; /* more space so links don't touch the arrows, and arrows can sit outside scroll area */
     /* Fade out nav links near the arrows using a gradient mask */
-    mask-image: linear-gradient(to right, transparent 0%, #000 12%, #000 88%, transparent 100%);
-    -webkit-mask-image: linear-gradient(to right, transparent 0%, #000 12%, #000 88%, transparent 100%);
+    mask-image: linear-gradient(to right, transparent 0%, #000 5%, #000 95%, transparent 100%);
+    -webkit-mask-image: linear-gradient(to right, transparent 0%, #000 5%, #000 95%, transparent 100%);
     mask-size: 100% 100%;
     mask-repeat: no-repeat;
     -webkit-mask-size: 100% 100%;
@@ -42,7 +42,7 @@
     display: inline-block;
     font-size: 1.3rem;
     margin: 0;
-    padding: 0.5em 0.3em;
+    padding: 0.5em 0.9em;
     border-radius: 6px;
     transition: background 0.18s, color 0.18s, box-shadow 0.18s, transform 0.13s;
     white-space: nowrap;
