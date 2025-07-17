@@ -26,7 +26,6 @@
     -webkit-overflow-scrolling: touch;
     scrollbar-width: none; /* Firefox */
     position: relative;
-    padding: 0 2.2em; /* more space so links don't touch the arrows, and arrows can sit outside scroll area */
     /* Fade out nav links near the arrows using a gradient mask */
     mask-image: linear-gradient(to right, transparent 0%, #000 5%, #000 95%, transparent 100%);
     -webkit-mask-image: linear-gradient(to right, transparent 0%, #000 5%, #000 95%, transparent 100%);
